@@ -13,6 +13,7 @@ const searchMovie = async function () {
   const resJSON = await res.json();
   const obj = resJSON.Search;
   console.log(resJSON);
+  ress.innerHTML = "";
   obj.map((val) => {
     render(val);
   });
@@ -33,6 +34,7 @@ function clickk() {
   btn.addEventListener("click", function () {
     inpVal = input.value;
     searchMovie();
+    input.value = "";
   });
 }
 
@@ -59,5 +61,7 @@ const render = function (malumot) {
 
 ortga.addEventListener("click", function () {
   viewChiqarish();
-  
+  ress.innerHTML = "";
+
+  ortga.classList.toggle("hidden");
 });
