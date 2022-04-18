@@ -11,3 +11,13 @@
 //   const apiJSON = api1.json();
 //   console.log(apiJSON);
 // };
+
+export const apiModel = async function () {
+  const res = await fetch(
+    `https://omdbapi.com/?s=${inpVal}&page=1&apikey=fc1fef96`
+  );
+  const resJSON = await res.json();
+  const obj = resJSON.Search;
+  console.log(resJSON);
+  return obj;
+};

@@ -4,9 +4,19 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-image: url("../../image/image2.jpg");
+  --image1: url("../../image/image1.jpg");
+  --image2: url("../../image/image2.jpg");
+  --image3: url("../../image/image3.jpg");
+  --image4: url("../../image/image4.jpg");
+  --image5: url("../../image/image5.jpg");
+  --background-container: url("../../image/image4.jpg");
+}
+
 body {
   font-family: sans-serif;
-  background-image: url("../../image/967211u-960.jpg");
+  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -17,7 +27,7 @@ body {
   margin: 20px auto;
   border: 5px solid rebeccapurple;
   border-radius: 10px;
-  background-image: url("../../image/MV5BMzQ5OTUwOTQ4.jpg");
+  background-image: --background-container;
   background-size: cover;
   display: flex;
   justify-content: center;

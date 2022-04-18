@@ -6,6 +6,8 @@ const ress = document.querySelector(".ress");
 const ortga = document.querySelector(".ortga");
 let inpVal;
 
+import { apiModel } from "./model.js";
+
 const searchMovie = async function () {
   const res = await fetch(
     `https://omdbapi.com/?s=${inpVal}&page=1&apikey=fc1fef96`
@@ -13,6 +15,7 @@ const searchMovie = async function () {
   const resJSON = await res.json();
   const obj = resJSON.Search;
   console.log(resJSON);
+
   ress.innerHTML = "";
   obj.map((val) => {
     render(val);
@@ -65,3 +68,11 @@ ortga.addEventListener("click", function () {
 
   ortga.classList.toggle("hidden");
 });
+
+setInterval(function () {
+  console.log(Math.floor(Math.random() * 5));
+  document.documentElement.style.setProperty(
+    "--background-image",
+    `url("../../image/image${Math.floor(Math.random() + 5)}.jpg")`
+  );
+}, 3000);
