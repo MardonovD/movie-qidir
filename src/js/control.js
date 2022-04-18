@@ -6,8 +6,6 @@ const ress = document.querySelector(".ress");
 const ortga = document.querySelector(".ortga");
 let inpVal;
 
-import { apiModel } from "./model.js";
-
 const searchMovie = async function () {
   const res = await fetch(
     `https://omdbapi.com/?s=${inpVal}&page=1&apikey=fc1fef96`
@@ -23,13 +21,11 @@ const searchMovie = async function () {
 
   viewChiqarish();
   ortga.classList.toggle("hidden");
-
 };
 
 const viewChiqarish = function () {
   container.classList.toggle("hidden");
 };
-
 
 function clickk() {
   btn.addEventListener("click", function () {
@@ -67,8 +63,6 @@ ortga.addEventListener("click", function () {
   ortga.classList.toggle("hidden");
 });
 
-
-
 setInterval(function () {
   console.log(Math.floor(Math.random() * 5));
   document.documentElement.style.setProperty(
@@ -76,4 +70,3 @@ setInterval(function () {
     `url("../../image/image${Math.floor(Math.random() + 5)}.jpg")`
   );
 }, 3000);
-
