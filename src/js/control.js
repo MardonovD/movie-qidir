@@ -23,15 +23,13 @@ const searchMovie = async function () {
 
   viewChiqarish();
   ortga.classList.toggle("hidden");
+
 };
 
 const viewChiqarish = function () {
   container.classList.toggle("hidden");
 };
 
-const tozalash = function () {
-  input.innerHTML = "";
-};
 
 function clickk() {
   btn.addEventListener("click", function () {
@@ -69,6 +67,8 @@ ortga.addEventListener("click", function () {
   ortga.classList.toggle("hidden");
 });
 
+
+
 setInterval(function () {
   console.log(Math.floor(Math.random() * 5));
   document.documentElement.style.setProperty(
@@ -76,3 +76,4 @@ setInterval(function () {
     `url("../../image/image${Math.floor(Math.random() + 5)}.jpg")`
   );
 }, 3000);
+

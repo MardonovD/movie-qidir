@@ -25,7 +25,10 @@ body {
   width: 90%;
   height: 80vh;
   margin: 20px auto;
-  border: 5px solid rebeccapurple;
+  border-top: 5px solid rebeccapurple;
+  border-bottom: 5px solid saddlebrown;
+  border-left: 5px solid maroon;
+  border-right: 5px solid crimson;
   border-radius: 10px;
   background-image: --background-container;
   background-size: cover;
